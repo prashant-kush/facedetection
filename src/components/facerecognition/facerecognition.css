@@ -1,0 +1,17 @@
+#boundingbox
+{
+	position: absolute;
+	border-style: solid;
+	border-radius: 3px;
+	border-width: 3px;
+	border-color: blue;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	visibility: hidden;
+}
+.mt2
+{
+	text-align: center;
+	display: inline-block;
+}
