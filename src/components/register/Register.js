@@ -34,7 +34,7 @@ class Register extends React.Component
 		}
 		else
 		{
-		fetch("http://localhost:3001/register",
+		fetch("https://face-detection2.herokuapp.com/register",
 		{
 			method:"post",
 			headers:{"content-type":"application/json"},
