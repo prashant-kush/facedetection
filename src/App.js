@@ -61,7 +61,7 @@ class App extends Component {
 
  onRouteChange=(route)=>
  {
-  this.setState({route:route})
+  this.setState({route:route});
  }
 
   onInputChange=(event)=>{
@@ -70,10 +70,13 @@ class App extends Component {
     onButtonSubmit=()=>
     {
       this.setState({URL:this.state.input});
+      console.log(this.state.URL);
       const square=document.getElementById("boundingbox").style.visibility="visible";
-      app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then((response)=>
+      app.models.predict("a403429f2ddf4b49b307e318f00e528b", this.state.input).then((response)=>
      {
+      console.log("response");
       this.displayBox(this.face(response.outputs[0].data.regions[0].region_info.bounding_box));
+      this.setState({entries:this.state.entries+1});
       // do something with response
     },
     function(err) {
@@ -89,6 +92,16 @@ class App extends Component {
         name:user.name,
         entries:user.entries,
         joined:user.joined
+      }})
+    }
+    deleteUser=()=>
+    {
+      this.setState({user:{
+        id:'',
+        email:'',
+        name:'',
+        entries:'',
+        joined:''
       }})
     }
 
