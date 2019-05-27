@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/prashant-kush/facerecognition/precache-manifest.95a89cfbd608adb330f8d4aa94810830.js"
+  "/prashant-kush/facedetection/precache-manifest.2b9f833577e915c75bde6a20a2e0e2dd.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/prashant-kush/facerecognition/index.html", {
+workbox.routing.registerNavigationRoute("/prashant-kush/facedetection/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
